@@ -7,6 +7,7 @@ package ejb;
 import jakarta.ejb.LocalBean;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
+import jakarta.jws.WebService;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
 @Stateless
 @LocalBean
 @Counter
+@WebService
 public class AutoPartsEJB implements AutoPartsEJBRemote {
 
     @Inject

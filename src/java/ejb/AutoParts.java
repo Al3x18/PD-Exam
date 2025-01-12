@@ -10,6 +10,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 /**
@@ -23,6 +24,7 @@ import java.io.Serializable;
     @NamedQuery(name="AutoParts.findAll", query="SELECT a FROM AutoParts a"),
     @NamedQuery(name="AutoParts.needOrder", query="SELECT a FROM AutoParts a WHERE a.availability < 10")
 })
+@XmlRootElement
 public class AutoParts implements Serializable {
     
     @Id
